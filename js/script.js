@@ -1,3 +1,4 @@
+"use strict";
 var map;
 
 // markers array
@@ -121,7 +122,7 @@ var viewModel = function() {
     self.userInput = ko.observable("");
 
     // initiate oberservable array to store info of locations
-    self.locationList = ko.observableArray([]);
+    self.locationList = ko.observableArray();
     markers.forEach(function(marker){
         self.locationList.push(new loc(marker));
     });
@@ -133,7 +134,7 @@ var viewModel = function() {
 
     // function that handles everything related to a infowindow
     self.infowindowOutput = function(location) {
-        for(var i = 0; i < markers.length; i++){
+        for(var i = 0, len = markers.length; i < len; i++){
             self.locationList()[i].marker.setAnimation(null);
         }
         // add on click animation to marker
@@ -150,6 +151,8 @@ var viewModel = function() {
         var list = [];
         var length = self.locationList().length;
         var bounds = new google.maps.LatLngBounds();
+        // close infowindow every time we update the data
+        self.infowindow.close();
 
         for(var i = 0; i < length; i++){
             if (self.locationList()[i].title().toLowerCase().indexOf(self.userInput().toLowerCase()) != -1) {
@@ -215,8 +218,6 @@ var viewModel = function() {
     });
 };
 
-
-
 // loc object to store info of markers
 var loc = function(marker){
     var self = this;
@@ -238,9 +239,4 @@ var loc = function(marker){
         }
     };
 }
-
-
-
-
-
 
