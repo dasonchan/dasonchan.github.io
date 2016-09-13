@@ -1,0 +1,34 @@
+
+div.col-sm-12 {
+    height: 100%;
+    position: absolute;
+    float: right;
+    align-content: right;
+}
+div.col-sm-3 {
+    float: left;
+    z-index: 2;
+    border-style: solid;
+    background-color: rgba(256,256,256,0.85);
+}
+ul {
+    list-style-type: none;
+}
+#list {
+    max-height: 480px;
+    overflow: scroll;
+    margin: 0 5px;
+}
+#map {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+li {
+    margin-top: 10px;
+    margin-left: -35px;
+}
+li:hover {
+    background-color: #7D7D7D;
+    color: WHITE;
+}
