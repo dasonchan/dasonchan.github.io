@@ -92,6 +92,7 @@ function initMap() {
 
 function googleError(){
     console.trace();
+    alert("Error occurs loading Google Map API");
 }
 
 
@@ -120,7 +121,6 @@ var viewModel = function() {
     var self = this;
     // initiate observable to store user input
     self.userInput = ko.observable("");
-
     // initiate oberservable array to store info of locations
     self.locationList = ko.observableArray();
     markers.forEach(function(marker){
@@ -216,6 +216,13 @@ var viewModel = function() {
             }
         })(location));
     });
+
+    // initiate observable to store the state of list view
+    self.showList = ko.observable(true);
+
+    self.toggle = function(){
+        self.showList(!self.showList());
+    }
 };
 
 // loc object to store info of markers

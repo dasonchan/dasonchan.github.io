@@ -10,6 +10,6 @@ images folder - Image files
     peacock.png - The icon for the center marker
 
 How to Run:
-1. Download the project and unzip it or clone the repo: git clone https://github.com/dasonchan/Neighborhood-map
+1. Visit live version at https://dasonchan.github.io/ or download the project and unzip it or clone the repo: git clone https://github.com/dasonchan/Neighborhood-map
 2. Simply open index.html in any browser
 

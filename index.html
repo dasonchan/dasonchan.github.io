@@ -10,7 +10,10 @@
 <body>
     <div class="container-fliud">
         <div class="row">
-            <div class="col-xs-3">
+            <div class="row">
+                <button class="toggle" data-bind="click: $root.toggle, text:'ON / OFF'"></button>
+            </div>
+            <div class="col-sm-3 col-xs-6" data-bind="visible: showList">
                 <input type="text" data-bind="textInput: userInput" placeholder="Search">
                 <div id="list">
                 <ul data-bind="foreach: markersList">

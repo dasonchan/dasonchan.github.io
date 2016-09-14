@@ -5,11 +5,15 @@ div.col-xs-12 {
     float: right;
     align-content: right;
 }
-div.col-xs-3 {
+div.col-sm-3,
+div.col-xs-6 {
     float: left;
     z-index: 2;
     border-style: solid;
     background-color: rgba(256,256,256,0.85);
+}
+button.toggle {
+    margin-left: 33px;
 }
 ul {
     list-style-type: none;
